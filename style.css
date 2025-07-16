@@ -1,0 +1,371 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* Stylish Navbar */
+.navbar {
+  background: linear-gradient(90deg, #111, #333); /* Gradient background */
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  position: sticky; /* Stays at top */
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo Style */
+.navbar .logo img {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Logo hover effect */
+.navbar .logo img:hover {
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* Navbar Menu */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Links */
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #e49f0a; /* Yellow font */
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background: #e49f0a; /* Yellow underline */
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #fff; /* turns white on hover */
+}
+
+.navbar ul li a:hover::after {
+  width: 100%; /* underline expands */
+}
+
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero img {
+  border-radius: 50%;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero h1 span {
+  color: #ff4d00;
+}
+.hero p {
+  max-width: 500px;
+  margin: 20px auto;
+}
+.btn {
+  background: #ff4d00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+.icons img {
+  width: 60px;
+  height: 60px;
+  transition: 0.3s ease;
+  filter: invert(100%); /* default white */
+}
+
+/* Brand hover colors */
+.icons a:nth-child(1):hover img {
+  filter: invert(25%) sepia(90%) saturate(3000%) hue-rotate(190deg); /* Photoshop blue */
+}
+.icons a:nth-child(2):hover img {
+  filter: invert(36%) sepia(94%) saturate(5000%) hue-rotate(190deg); /* Behance blue */
+}
+.icons a:nth-child(3):hover img {
+  filter: invert(58%) sepia(95%) saturate(1700%) hue-rotate(80deg); /* Fiverr green */
+}
+.icons a:nth-child(4):hover img {
+  filter: invert(66%) sepia(85%) saturate(1600%) hue-rotate(80deg); /* Upwork green */
+}
+
+
+
+
+
+/* About */
+.about {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Projects */
+.projects {
+  text-align: center;            /* Centers text */
+  max-width: 900px;              /* Keeps content in middle */
+  margin: 0 auto;                /* Centers the whole section */
+  padding: 50px 20px;            /* Some spacing */
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background: #111;              /* Dark background for cards */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  width: 80%;                    /* Make card width smaller */
+  max-width: 600px;              /* Keep it centered */
+  text-align: center;            /* Center text inside card */
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);        /* Slight hover zoom */
+}
+
+.project-card img {
+  width: 100%;                   /* Full width image inside card */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  margin: 10px 0;
+}
+
+.project-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+
+
+/* Services */
+.services {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.service-box {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.service-box img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover img {
+  transform: scale(1.1); /* zoom effect on hover */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent bg */
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-box:hover .overlay-text {
+  opacity: 1; /* show text on hover */
+}
+
+
+/* Testimonials */
+.here-from {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.here-from h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+/* Flexbox to center icons */
+.platforms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Icons styling */
+.platforms img {
+  width: 50px;
+  height: 50px;
+  filter: invert(100%);  /* makes them white */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect with color glow */
+.platforms img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
+}
+/* ===== Contact Section ===== */
+.contact-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;              /* Dark background */
+  color: #fff;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+/* Contact container with 2 boxes side by side */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* stacks on small screens */
+}
+
+/* Individual boxes */
+.contact-box {
+  background: #222;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+.contact-box h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00c4ff; /* nice accent color */
+}
+
+/* Form elements */
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-box input,
+.contact-box textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-box textarea {
+  resize: none;
+}
+
+.contact-box button {
+  background: #00c4ff;
+  color: #111;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-box button:hover {
+  background: #00a8d6;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .contact-box {
+    width: 100%;
+  }
+}
+/* ✅ Active menu link style */
+.menu ul li a.active {
+  color: orange;          /* Change text color */
+  font-weight: bold;      /* Make it bolder */
+}
+
+/* You can also keep the underline always visible for active */
+.menu ul li a.active::after {
+  width: 100%;            /* Show full underline for active link */
+}
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+}
